@@ -19,4 +19,4 @@ RUN dotnet publish "Jumpstart_MVC_Web_App.csproj" -c Release -o /app/publish /p:
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", Jumpstart_MVC_Web_App.dll"]
+ENTRYPOINT ["dotnet", "Jumpstart_MVC_Web_App.dll"]
